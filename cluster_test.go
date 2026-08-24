@@ -791,7 +791,7 @@ func TestClusterClientInit(t *testing.T) {
 						}
 						return shardsResp
 					},
-					VersionFn: func() int { return 8 },
+					InfoFn: func() map[string]ValkeyMessage { return map[string]ValkeyMessage{"version": strmsg('+', "8.0.0")} },
 				}
 			},
 			newRetryer(defaultRetryDelayFn),
@@ -904,7 +904,7 @@ func TestClusterClientInit(t *testing.T) {
 					DoFn: func(cmd Completed) ValkeyResult {
 						return NewResult(slicemsg('*', []ValkeyMessage{}), nil)
 					},
-					VersionFn: func() int { return 8 },
+					InfoFn: func() map[string]ValkeyMessage { return map[string]ValkeyMessage{"version": strmsg('+', "8.0.0")} },
 				}
 			},
 			newRetryer(defaultRetryDelayFn),
@@ -914,7 +914,7 @@ func TestClusterClientInit(t *testing.T) {
 	})
 
 	t.Run("Refresh cluster of 1 node without knowing its own ip", func(t *testing.T) {
-		getClient := func(version int) (client *clusterClient, err error) {
+		getClient := func(version string) (client *clusterClient, err error) {
 			return newClusterClient(
 				&ClientOption{InitAddress: []string{"127.0.4.1:4"}},
 				func(dst string, opt *ClientOption) conn {
@@ -925,8 +925,10 @@ func TestClusterClientInit(t *testing.T) {
 							}
 							return singleShardWithoutIP
 						},
-						AddrFn:    func() string { return "127.0.4.1:4" },
-						VersionFn: func() int { return version },
+						AddrFn: func() string { return "127.0.4.1:4" },
+						InfoFn: func() map[string]ValkeyMessage {
+							return map[string]ValkeyMessage{"version": strmsg('+', version)}
+						},
 					}
 				},
 				newRetryer(defaultRetryDelayFn),
@@ -934,7 +936,7 @@ func TestClusterClientInit(t *testing.T) {
 		}
 
 		t.Run("slots", func(t *testing.T) {
-			client, err := getClient(6)
+			client, err := getClient("7.2.5")
 			if err != nil {
 				t.Fatalf("unexpected err %v", err)
 			}
@@ -947,7 +949,7 @@ func TestClusterClientInit(t *testing.T) {
 		})
 
 		t.Run("shards", func(t *testing.T) {
-			client, err := getClient(8)
+			client, err := getClient("7.2.6")
 			if err != nil {
 				t.Fatalf("unexpected err %v", err)
 			}
@@ -1021,7 +1023,7 @@ func TestClusterClientInit(t *testing.T) {
 							}
 							return shardsResp
 						},
-						VersionFn: func() int { return 8 },
+						InfoFn: func() map[string]ValkeyMessage { return map[string]ValkeyMessage{"version": strmsg('+', "8.0.0")} },
 					}
 				},
 				newRetryer(defaultRetryDelayFn),
@@ -1109,7 +1111,7 @@ func TestClusterClientInit(t *testing.T) {
 							}
 							return shardsResp
 						},
-						VersionFn: func() int { return 8 },
+						InfoFn: func() map[string]ValkeyMessage { return map[string]ValkeyMessage{"version": strmsg('+', "8.0.0")} },
 					}
 				},
 				newRetryer(defaultRetryDelayFn),
@@ -1129,7 +1131,7 @@ func TestClusterClientInit(t *testing.T) {
 					DoFn: func(cmd Completed) ValkeyResult {
 						return shardsRespTls
 					},
-					VersionFn: func() int { return 8 },
+					InfoFn: func() map[string]ValkeyMessage { return map[string]ValkeyMessage{"version": strmsg('+', "8.0.0")} },
 				}
 			},
 			newRetryer(defaultRetryDelayFn),

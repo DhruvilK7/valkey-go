@@ -198,13 +198,13 @@ func clusterRefreshAutoMaxDelay(n int) time.Duration {
 }
 
 type clusterslots struct {
-	addr  string
-	reply ValkeyResult
-	ver   int
+	addr       string
+	reply      ValkeyResult
+	usedShards bool
 }
 
 func (s clusterslots) parse(tls bool) map[string]group {
-	if s.ver < 8 {
+	if !s.usedShards {
 		return parseSlots(s.reply.val, s.addr)
 	}
 	return parseShards(s.reply.val, s.addr, tls)
@@ -219,11 +219,11 @@ func getClusterSlots(c conn, timeout time.Duration) clusterslots {
 	} else {
 		ctx = context.Background()
 	}
-	v := c.Version()
-	if v < 8 {
-		return clusterslots{reply: c.Do(ctx, cmds.SlotCmd), addr: c.Addr(), ver: v}
+	verMsg := c.Info()["version"]
+	if versionCompare(verMsg.string(), "7.2.6") < 0 {
+		return clusterslots{reply: c.Do(ctx, cmds.SlotCmd), addr: c.Addr()}
 	}
-	return clusterslots{reply: c.Do(ctx, cmds.ShardsCmd), addr: c.Addr(), ver: v}
+	return clusterslots{reply: c.Do(ctx, cmds.ShardsCmd), addr: c.Addr(), usedShards: true}
 }
 
 func (c *clusterClient) _refresh() (err error) {

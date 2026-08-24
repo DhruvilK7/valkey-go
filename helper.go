@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"iter"
+	"strconv"
+	"strings"
 	"sync/atomic"
 	"time"
 
@@ -492,4 +494,32 @@ func pickAZ(nodes []NodeInfo, clientAZ string, startIdx int, counter *atomic.Uin
 	k := c % count
 
 	return int(matches[k])
+}
+
+func versionCompare(v1, v2 string) int {
+	parts1 := strings.Split(strings.TrimPrefix(v1, "v"), ".")
+	parts2 := strings.Split(strings.TrimPrefix(v2, "v"), ".")
+
+	maxLen := len(parts1)
+	if len(parts2) > maxLen {
+		maxLen = len(parts2)
+	}
+
+	for i := 0; i < maxLen; i++ {
+		var n1, n2 int
+		if i < len(parts1) {
+			n1, _ = strconv.Atoi(parts1[i])
+		}
+		if i < len(parts2) {
+			n2, _ = strconv.Atoi(parts2[i])
+		}
+
+		if n1 < n2 {
+			return -1
+		}
+		if n1 > n2 {
+			return 1
+		}
+	}
+	return 0
 }
