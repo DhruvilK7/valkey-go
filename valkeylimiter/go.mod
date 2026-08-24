@@ -7,8 +7,8 @@ replace github.com/DhruvilK7/valkey-go => ../
 replace github.com/DhruvilK7/valkey-go/mock => ../mock
 
 require (
-	github.com/DhruvilK7/valkey-go v1.0.77
-	github.com/DhruvilK7/valkey-go/mock v1.0.77
+	github.com/DhruvilK7/valkey-go v0.0.2-fork1
+	github.com/DhruvilK7/valkey-go/mock v0.0.2-fork1
 	go.uber.org/mock v0.6.0
 )
 
