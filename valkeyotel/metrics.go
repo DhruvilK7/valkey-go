@@ -14,7 +14,7 @@ import (
 	"go.opentelemetry.io/otel/metric"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 var (

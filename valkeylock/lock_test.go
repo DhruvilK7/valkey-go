@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 const testDB = 10

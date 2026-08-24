@@ -11,7 +11,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 func Result(val valkey.ValkeyMessage) valkey.ValkeyResult {

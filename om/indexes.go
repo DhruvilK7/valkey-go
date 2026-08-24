@@ -7,8 +7,8 @@ import (
 	"slices"
 	"strconv"
 
-	"github.com/valkey-io/valkey-go"
-	"github.com/valkey-io/valkey-go/internal/cmds"
+	"github.com/DhruvilK7/valkey-go"
+	"github.com/DhruvilK7/valkey-go/internal/cmds"
 )
 
 // createAndAliasIndex creates a new versioned index, aliases it to idx, and then drops all

@@ -1,4 +1,4 @@
-module github.com/valkey-io/valkey-go
+module github.com/DhruvilK7/valkey-go
 
 go 1.25.0
 

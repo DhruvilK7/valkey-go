@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 	"go.uber.org/mock/gomock"
 )
 

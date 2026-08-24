@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/valkey-io/valkey-go"
-	"github.com/valkey-io/valkey-go/mock"
-	"github.com/valkey-io/valkey-go/valkeycompat"
+	"github.com/DhruvilK7/valkey-go"
+	"github.com/DhruvilK7/valkey-go/mock"
+	"github.com/DhruvilK7/valkey-go/valkeycompat"
 )
 
 type ExpectedString struct{ exp *expectation }

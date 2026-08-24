@@ -9,7 +9,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	intl "github.com/valkey-io/valkey-go/internal/cmds"
+	intl "github.com/DhruvilK7/valkey-go/internal/cmds"
 )
 
 // MGetCache is a helper that consults the client-side caches with multiple keys by grouping keys within the same slot into multiple GETs

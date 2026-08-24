@@ -10,8 +10,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/valkey-io/valkey-go"
-	"github.com/valkey-io/valkey-go/internal/util"
+	"github.com/DhruvilK7/valkey-go"
+	"github.com/DhruvilK7/valkey-go/internal/util"
 )
 
 // LockerOption should be passed to NewLocker to construct a Locker

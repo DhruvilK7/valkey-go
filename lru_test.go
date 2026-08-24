@@ -10,7 +10,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/valkey-io/valkey-go/internal/cmds"
+	"github.com/DhruvilK7/valkey-go/internal/cmds"
 )
 
 const PTTL = 50

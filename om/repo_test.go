@@ -3,7 +3,7 @@ package om
 import (
 	"testing"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 type option func(*valkey.ClientOption)

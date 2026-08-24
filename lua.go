@@ -8,7 +8,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/valkey-io/valkey-go/internal/util"
+	"github.com/DhruvilK7/valkey-go/internal/util"
 )
 
 // LuaOption is a functional option for configuring Lua script behavior.

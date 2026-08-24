@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/valkey-io/valkey-go/internal/util"
+	"github.com/DhruvilK7/valkey-go/internal/util"
 )
 
 const (

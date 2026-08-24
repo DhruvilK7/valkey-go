@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/valkey-io/valkey-go"
-	"github.com/valkey-io/valkey-go/internal/cmds"
+	"github.com/DhruvilK7/valkey-go"
+	"github.com/DhruvilK7/valkey-go/internal/cmds"
 )
 
 type (

@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 type OpNameResolver interface {

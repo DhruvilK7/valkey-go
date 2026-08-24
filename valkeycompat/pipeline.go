@@ -32,7 +32,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 // Pipeliner is a mechanism to realise Valkey Pipeline technique.

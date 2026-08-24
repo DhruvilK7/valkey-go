@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"unsafe"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 func newHashConvFactory(t reflect.Type, schema schema) *hashConvFactory {

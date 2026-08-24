@@ -1,6 +1,6 @@
 package valkeylimiter
 
-import "github.com/valkey-io/valkey-go/internal/util"
+import "github.com/DhruvilK7/valkey-go/internal/util"
 
 var rateBuffersPool = util.NewPool(func(capacity int) *rateBuffersContainer {
 	return &rateBuffersContainer{

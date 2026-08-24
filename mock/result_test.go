@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 func TestValkeyString(t *testing.T) {

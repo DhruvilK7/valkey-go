@@ -1,6 +1,6 @@
 package valkey
 
-import "github.com/valkey-io/valkey-go/internal/cmds"
+import "github.com/DhruvilK7/valkey-go/internal/cmds"
 
 // Builder represents a command builder. It should only be created from the client.B() method.
 type Builder = cmds.Builder

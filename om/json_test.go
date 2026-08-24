@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/oklog/ulid/v2"
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 type JSONTestStruct struct {

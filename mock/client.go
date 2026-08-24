@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/valkey-io/valkey-go"
-	"github.com/valkey-io/valkey-go/internal/cmds"
+	"github.com/DhruvilK7/valkey-go"
+	"github.com/DhruvilK7/valkey-go/internal/cmds"
 	"go.uber.org/mock/gomock"
 )
 

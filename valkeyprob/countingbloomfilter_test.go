@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 func TestNewCountingBloomFilter(t *testing.T) {

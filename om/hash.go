@@ -8,8 +8,8 @@ import (
 
 	"github.com/oklog/ulid/v2"
 
-	"github.com/valkey-io/valkey-go"
-	"github.com/valkey-io/valkey-go/internal/cmds"
+	"github.com/DhruvilK7/valkey-go"
+	"github.com/DhruvilK7/valkey-go/internal/cmds"
 )
 
 // NewHashRepository creates a HashRepository.

@@ -21,7 +21,7 @@ import (
 
 	metricapi "go.opentelemetry.io/otel/metric"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 var (

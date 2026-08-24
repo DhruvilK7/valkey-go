@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/valkey-io/valkey-go/internal/cmds"
+	"github.com/DhruvilK7/valkey-go/internal/cmds"
 )
 
 var slotsResp = NewResult(slicemsg('*', []ValkeyMessage{

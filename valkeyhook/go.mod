@@ -1,15 +1,15 @@
-module github.com/valkey-io/valkey-go/valkeyhook
+module github.com/DhruvilK7/valkey-go/valkeyhook
 
 go 1.25.0
 
 replace (
-	github.com/valkey-io/valkey-go => ../
-	github.com/valkey-io/valkey-go/mock => ../mock
+	github.com/DhruvilK7/valkey-go => ../
+	github.com/DhruvilK7/valkey-go/mock => ../mock
 )
 
 require (
-	github.com/valkey-io/valkey-go v1.0.77
-	github.com/valkey-io/valkey-go/mock v1.0.77
+	github.com/DhruvilK7/valkey-go v1.0.77
+	github.com/DhruvilK7/valkey-go/mock v1.0.77
 	go.uber.org/mock v0.6.0
 )
 

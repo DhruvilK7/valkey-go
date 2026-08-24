@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/valkey-io/valkey-go"
+	"github.com/DhruvilK7/valkey-go"
 )
 
 var EndOfCursor = errors.New("end of cursor")
