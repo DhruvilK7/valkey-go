@@ -9,8 +9,8 @@ replace github.com/DhruvilK7/valkey-go/mock => ../mock
 require (
 	github.com/onsi/ginkgo/v2 v2.32.1
 	github.com/onsi/gomega v1.42.1
-	github.com/DhruvilK7/valkey-go v0.0.2-fork1
-	github.com/DhruvilK7/valkey-go/mock v0.0.2-fork1
+	github.com/DhruvilK7/valkey-go v0.0.1-beta.3
+	github.com/DhruvilK7/valkey-go/mock v0.0.1-beta.3
 	go.uber.org/mock v0.6.0
 )
 

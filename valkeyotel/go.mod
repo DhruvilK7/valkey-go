@@ -5,7 +5,7 @@ go 1.25.0
 replace github.com/DhruvilK7/valkey-go => ../
 
 require (
-	github.com/DhruvilK7/valkey-go v0.0.2-fork1
+	github.com/DhruvilK7/valkey-go v0.0.1-beta.3
 	go.opentelemetry.io/otel v1.45.0
 	go.opentelemetry.io/otel/metric v1.45.0
 	go.opentelemetry.io/otel/sdk v1.45.0
